@@ -118,8 +118,8 @@ addPost = (postData) => {
 
         const today = new Date();
         postData.postDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`
-        console.log("Post Date: ")
-        console.log(postData.postDate)
+        // console.log("Post Date: ")
+        // console.log(postData.postDate)
 
         try {
             posts.push(postData);
@@ -144,8 +144,8 @@ getPublishedPostsByCategory = (category) => {
         catch (err) {
             reject("error getting category posts")
         }     
-        console.log("Category Posts")
-        console.log(categoryPosts)
+        // console.log("Category Posts")
+        // console.log(categoryPosts)
         resolve(categoryPosts)
    
     }) 

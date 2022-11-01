@@ -112,7 +112,7 @@ app.get('/blog', async (req, res) => {
 
 app.get('/blog/:id', async (req, res) => {
 
-    console.log("Testing, attention please\n")
+    // console.log("Testing, attention please\n")
     // Declare an object to store properties for the view
     let viewData = {};
 
@@ -229,7 +229,7 @@ app.post("/posts/add", upload.single("featureImage"), (req, res) => {
 
     async function upload(req) {
         let result = await streamUpload(req);
-        console.log(result);
+        // console.log(result);
         return result;
     }
 
@@ -249,7 +249,7 @@ app.post("/posts/add", upload.single("featureImage"), (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send("Page Not Found")
+    res.status(404).render("404")
 })
 
 dataService.initialize().then(
